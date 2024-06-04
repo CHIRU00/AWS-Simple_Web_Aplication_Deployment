@@ -1,0 +1,11 @@
+import json
+import math
+
+def lambda_handler(event, context):
+    num1 = event['num1']
+    num2 = event['num2']
+    result = num1 + num2  # or any other math operation
+    return {
+        'statusCode': 200,
+        'body': json.dumps(result)
+    }
